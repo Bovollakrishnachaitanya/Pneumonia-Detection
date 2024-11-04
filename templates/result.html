@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .container {
+            text-align: center;
+        }
+        img {
+            max-width: 100%; /* Ensure the image does not exceed the container width */
+            max-height: 400px; /* Set a maximum height for the image */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p>Prediction: {{ prediction }}</p>
+        <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+    </div>
+</body>
+</html>
